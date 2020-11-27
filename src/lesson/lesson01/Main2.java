@@ -7,6 +7,9 @@ public class Main2
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        // змінюємо роздільник з пробілу на новий рядок,
+        // щоб могти зчитувати текст з пробілами як одне значення
+        scanner.useDelimiter("\n");
 
         System.out.println("Enter number 'a'");
         int a = scanner.nextInt();
@@ -30,7 +33,7 @@ public class Main2
         }
 
         System.out.print("Enter string: ");
-        String newLine = scanner.nextLine();
+        String newLine = scanner.next(); // вводимо текст в консолі і записуємо у змінну
         String newLine1 = "Hello World";
 
         System.out.println("1: " + newLine);
