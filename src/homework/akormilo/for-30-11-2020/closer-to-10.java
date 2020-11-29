@@ -5,7 +5,7 @@ public static void task5() {
         System.out.println("Input n");
         var n = scann.nextInt();
         var ten = 10;
-        if (ten - n > ten - m){
+        if (Math.abs(ten- n) > Math.abs(ten - m)){
             System.out.println(m+" - is closer to 10");
         }
         else if (ten - n == ten - m){

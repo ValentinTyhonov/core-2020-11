@@ -6,15 +6,15 @@ public static void task1(){
         var b = scann.nextInt();
         System.out.println("Input c");
         var c = scann.nextInt();
-        var D = Math.pow(b,2)-4*a*c;
+        var d = Math.pow(b,2)-4*a*c;
         System.out.println(D);
-        if (D > 0){
-            var x1 = (-b+Math.sqrt(D))/2*a;
-            var x2 = (-b-Math.sqrt(D))/2*a;
+        if (d > 0){
+            var x1 = (-b+Math.sqrt(d))/2*a;
+            var x2 = (-b-Math.sqrt(d))/2*a;
             System.out.println("X1 = " + x1 + " X2 = " + x2);
         }
-        else if (D == 0){
-            var x = (-b+Math.sqrt(D))/2*a;
+        else if (d == 0){
+            var x = (-b+Math.sqrt(d))/2*a;
             System.out.println("X = " + x);
         }
         else{
