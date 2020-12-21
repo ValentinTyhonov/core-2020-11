@@ -51,12 +51,10 @@ public enum Signal
 
     public static Signal fromString(String signalString) {
         for (Signal signal : values()) {
-            if (signal.name().equalsIgnoreCase(signalString)
-                || signal.getTitle().equalsIgnoreCase(signalString)
-                || signal.getAction().equalsIgnoreCase(signalString)) {
+            if (signal.name().equalsIgnoreCase(signalString) || signal.getTitle().equalsIgnoreCase(signalString)) {
                 return signal;
             }
         }
-        return Signal.YELLOW;
+        return null;
     }
 }

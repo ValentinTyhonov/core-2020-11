@@ -62,6 +62,11 @@ public abstract class Animal
         this.color = color;
     }
 
-    public abstract void talk();
+    public abstract void talk(String s);
+
+    public abstract boolean isOld();
+
+    public abstract String getCharacteristic();
+
 
 }

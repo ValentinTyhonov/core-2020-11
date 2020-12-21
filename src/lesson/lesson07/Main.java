@@ -43,5 +43,8 @@ public class Main
         signal1.tellMe();
 
         Signal.GREEN.tellMe();
+
+        Signal[] signals1 = Signal.values();
+        System.out.println(signals1[1]);
     }
 }

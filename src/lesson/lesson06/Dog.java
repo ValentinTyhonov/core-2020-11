@@ -1,6 +1,6 @@
 package lesson.lesson06;
 
-public class Cat extends Animal implements Alive
+public class Dog extends Animal implements Alive
 {
 
     @Override
@@ -17,7 +17,7 @@ public class Cat extends Animal implements Alive
     @Override
     public boolean isOld()
     {
-        if (this.getAge() >= 6) {
+        if (this.getAge() >= 10) {
             return true;
         }
         return false;
@@ -26,7 +26,7 @@ public class Cat extends Animal implements Alive
     @Override
     public String getCharacteristic()
     {
-        return this.getColor() + " cat " + this.getName();
+        return this.getColor() + " dog " + this.getName();
     }
 
 
