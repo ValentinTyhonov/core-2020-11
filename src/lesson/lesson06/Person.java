@@ -1,6 +1,6 @@
 package lesson.lesson06;
 
-public class Person implements Buyer
+public class Person implements Buyer, Comparable<Person>
 {
     private String name;
     private int age;
@@ -8,8 +8,15 @@ public class Person implements Buyer
     Person() {
 
     }
-    Person(String name) {
+    Person(String name, int age) {
         this.name = name;
+        this.age = age;
+    }
+
+    @Override
+    public String toString()
+    {
+        return name + " " + age;
     }
 
     public String getName() {
@@ -47,5 +54,17 @@ public class Person implements Buyer
     public boolean buy()
     {
         return false;
+    }
+
+    @Override
+    public int compareTo(Person o)
+    {
+        if (this.age > o.getAge()) {
+            return 1;
+        } else if (this.age < o.getAge()) {
+            return -1;
+        } else {
+            return 0;
+        }
     }
 }
