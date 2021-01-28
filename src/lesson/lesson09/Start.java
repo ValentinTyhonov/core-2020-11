@@ -2,13 +2,18 @@ package lesson.lesson09;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.ListIterator;
 
 public class Start
 {
     public static void main(String[] args)
     {
-        List<Integer> numbers = new ArrayList<>();
+        List<Integer> numbers = new LinkedList<>();
+        List<Integer> numbers1 = new LinkedList<>();
 
         System.out.println("Empty? " + numbers.isEmpty());
 
@@ -18,6 +23,8 @@ public class Start
         numbers.add(4);
         numbers.add(10);
         numbers.add(65);
+
+        System.out.println(numbers.get(1));
 
         List<Integer> numbers2 = new ArrayList<>();
         numbers2.add(0);
@@ -54,9 +61,55 @@ public class Start
         Integer element = numbers.get(3);
         System.out.println("Elem with index 3: " + element);
 
-        numbers.add(null);
-
         printList(numbers);
+
+        System.out.println("-==========-");
+        System.out.println();
+
+        Iterator<Integer> iterator = numbers.iterator();
+
+        while (iterator.hasNext()) {
+//            Integer number = iterator.next();
+            System.out.println(iterator.next());
+            System.out.println(iterator.next()+5);
+
+        }
+
+        System.out.println(iterator.next());
+        iterator.remove();
+
+
+//        Iterator<Integer> iterator = numbers.iterator();
+//        while (iterator.hasNext()) {
+//            int i = iterator.next();
+//            System.out.println(i);
+//        }
+//        System.out.println("-==========-");
+//        System.out.println();
+//
+        ListIterator<Integer> listIterator = numbers.listIterator();
+        while (listIterator.hasNext()) {
+            listIterator.next();
+        }
+
+        listIterator = numbers.listIterator();
+        while (listIterator.hasNext()) {
+            System.out.println(listIterator.next());
+        }
+//        while (listIterator.hasPrevious()) {
+//            System.out.println(listIterator.set());
+//        }
+
+//        Arrays.sort();
+//
+//        HashMap<String, String> dd = new HashMap<>();
+//        dd.put("a", "aa");
+//
+//        System.out.println(dd.get("b"));
+
+
+
+
 
 
         List<String> stringList1 = Arrays.asList("elem1", "Toronto", "NewYork", "2", "bla");
