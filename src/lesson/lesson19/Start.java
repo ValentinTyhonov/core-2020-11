@@ -2,19 +2,31 @@ package lesson.lesson19;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.concurrent.ScheduledThreadPoolExecutor;
+import java.util.concurrent.ThreadPoolExecutor;
 
 public class Start
 {
     public static void main(String[] args) throws InterruptedException
     {
-        List<String> men = Arrays.asList("Max", "Anton", "Vlad", "Oleg");
+        List<String> men = Arrays.asList("Max", "Anton");
         List<String> women = Arrays.asList("Ira", "Julia", "Olia", "Olena");
 
         PeopleQueue menQueue = new PeopleQueue(men, 4000);
+        PeopleQueue menQueue2 = new PeopleQueue(Arrays.asList("er", "dfs", "df", "dfs"), 8000);
         PeopleQueue womenQueue = new PeopleQueue(women, 2000);
 
+
+        Thread thread = new Thread(new PeopleQueueRun(women, 3423));
+
         menQueue.start();
+        menQueue2.setDaemon(true);
+        menQueue2.start();
         womenQueue.start();
+        thread.start();
+
+
+
 
 
     }
