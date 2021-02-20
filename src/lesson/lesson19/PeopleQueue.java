@@ -2,8 +2,12 @@ package lesson.lesson19;
 
 import java.util.List;
 
+import javax.annotation.Generated;
+import javax.annotation.PreDestroy;
+
 public class PeopleQueue extends Thread
 {
+    @CustomAnnotation(value = "ererg", number = 44)
     private List<String> people;
     private long sleepTime;
 
