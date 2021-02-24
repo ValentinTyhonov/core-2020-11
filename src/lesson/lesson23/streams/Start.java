@@ -1,4 +1,4 @@
-package lesson.lesson23.optional.streams;
+package lesson.lesson23.streams;
 
 import java.util.ArrayList;
 import java.util.Arrays;
